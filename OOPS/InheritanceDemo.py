@@ -1,19 +1,11 @@
-#multi level inheritance
+class A:
+    def __init__(self):
+        print("this is from A class")
 
-class parent:
-    def land(self):
-        print("Suvarna bhoomi land")
-    def gold(self):
-        print("vaddanam mariyu vendi molathadu")
-class child(parent):
-    def ricemill(self):
-        print("rice mill")
-class grandchild(child):
-    def gold(self):
-        super().gold()
-        print("Bangaru siggu billa")
 
-obj=grandchild()
-obj.land()
-obj.gold()
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("this is from B class")
 
+b=B()
